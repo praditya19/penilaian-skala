@@ -60,17 +60,37 @@
             color: #fff;
             font-size: 0.9em;
         }
+
+        .back-button {
+            background-color: #007BFF;
+            color: #ffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Self Esteem Result</h1>
+        <h1>Family Support Result</h1>
         <div class="score-box">
             <p>Total Score: {{ $total_score }}</p>
             <p>Average Score: {{ $average_score }}</p>
         </div>
         <p class="category"><span>Category: {{ $category }}</span></p>
+        <a href="/" class="back-button">Back to Home</a>
         <div class="footer">
             &copy; 2024 Family Support Assessment. All rights reserved.
         </div>
