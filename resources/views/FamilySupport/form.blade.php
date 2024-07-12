@@ -192,31 +192,35 @@
             <div id="step-2" style="display:none;">
                 <p>
                     <span>SS:</span> Sangat Setuju - Responden sangat setuju dengan pernyataan yang diberikan.<br><br>
-                    <span>S:</span> Setuju - Responden setuju dengan pernyataan yang diberikan, meskipun mungkin tidak sepenuhnya.<br><br>
+                    <span>S:</span> Setuju - Responden setuju dengan pernyataan yang diberikan, meskipun mungkin tidak
+                    sepenuhnya.<br><br>
                     <span>TS:</span> Tidak Setuju - Responden tidak setuju dengan pernyataan yang diberikan.<br><br>
-                    <span>STS:</span> Sangat Tidak Setuju - Responden sangat tidak setuju dengan pernyataan yang diberikan.<br>
+                    <span>STS:</span> Sangat Tidak Setuju - Responden sangat tidak setuju dengan pernyataan yang
+                    diberikan.<br>
                 </p>
                 <div class="accordion">
                     @foreach ($questions->chunk(5) as $chunkIndex => $chunk)
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">Section {{ $chunkIndex + 1 }}</div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                @foreach ($chunk as $questionIndex => $question)
-                                <div class="form-group">
-                                    <label for="statement_{{ $question->id }}">{{ $questionIndex + 1 }}. {{ $question->question_text }}</label>
-                                    <select name="statement_{{ $question->id }}" id="statement_{{ $question->id }}" required>
-                                        <option value="">Select an option</option>
-                                        <option value="1">SS</option>
-                                        <option value="2">S</option>
-                                        <option value="3">TS</option>
-                                        <option value="4">STS</option>
-                                    </select>
+                        <div class="accordion-item">
+                            <div class="accordion-item-header">Section {{ $chunkIndex + 1 }}</div>
+                            <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    @foreach ($chunk as $questionIndex => $question)
+                                        <div class="form-group">
+                                            <label for="statement_{{ $question->id }}">{{ $questionIndex + 1 }}.
+                                                {{ $question->question_text }}</label>
+                                            <select name="statement_{{ $question->id }}"
+                                                id="statement_{{ $question->id }}" required>
+                                                <option value="">Select an option</option>
+                                                <option value="1">Sangat Setuju</option>
+                                                <option value="2">Setuju</option>
+                                                <option value="3">Tidak Setuju</option>
+                                                <option value="4">Sangat Tidak Setuju</option>
+                                            </select>
+                                        </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
                 <button type="submit">Submit</button>
