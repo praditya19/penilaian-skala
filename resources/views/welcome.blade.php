@@ -40,6 +40,8 @@
 <body>
     <div class="container text-center">
         <h1 class="display-4">Welcome to Assessment</h1>
+        <h2 class="display-4">EXSEED</h2>
+        <h3 class="display-4">Exploration of Self Esteem Model</h3>
         <p class="lead">Silahkan pilih salah satu kuisioner di bawah ini:</p>
         <div class="d-flex justify-content-center">
             <a href="/self-esteem-form" class="btn btn-primary btn-custom">Self Assessment</a>
