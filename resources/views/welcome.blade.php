@@ -16,7 +16,7 @@
         }
 
         .container {
-            margin-top: 100px;
+            margin-top: 10%;
             background: rgba(255, 255, 255, 0.2);
             padding: 30px;
             border-radius: 15px;
@@ -43,7 +43,7 @@
         <h2 class="display-4">EXSEED</h2>
         <h3 class="display-4">Exploration of Self Esteem Model</h3>
         <p class="lead">Silahkan pilih salah satu kuisioner di bawah ini:</p>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
             <a href="/self-esteem-form" class="btn btn-primary btn-custom">Self Assessment</a>
             <a href="/family-support-form" class="btn btn-success btn-custom">Family Support</a>
             <a href="/adjustment-form" class="btn btn-warning btn-custom">Adjustment</a>
