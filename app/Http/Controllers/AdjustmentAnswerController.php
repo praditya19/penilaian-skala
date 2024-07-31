@@ -46,7 +46,7 @@ class AdjustmentAnswerController extends Controller
 
         $category = $this->determineCategory($averageScore);
 
-        return view('adjustment.result', [
+        return view('Adjustment.result', [
             'total_score' => $totalScore,
             'average_score' => $averageScore,
             'category' => $category,
